@@ -21,7 +21,8 @@ include __DIR__ . '/utilites.php';
         </form>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-    <?php if($user_mail == '') { ?>
+    <?php 
+    if($user_mail == '') { ?>
         <h2 class="alert" role="alert">Inserisci la tua email per registrarti</h2>
     <?php }
     elseif(check_mail($user_mail) == true) { ?>
