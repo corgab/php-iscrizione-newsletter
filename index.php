@@ -21,11 +21,14 @@ include __DIR__ . '/utilites.php';
         </form>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-    <?php if(check_mail($user_mail) == true) { ?>
-        <h2 class="alert" role="alert">ISCRITTO!</h2>
-    <?php } 
+    <?php if($user_mail == '') { ?>
+        <h2 class="alert" role="alert">Inserisci la tua email per registrarti</h2>
+    <?php }
+    elseif(check_mail($user_mail) == true) { ?>
+        <h2 class="alert" role="alert">iscritto</h2>
+    <?php }
     else{ ?>
-        <h2 class="alert" role="alert">INSERISCI UN EMAIL VALIDA!</h2>
+        <h2 class="alert" role="alert">inserisci una mail valida</h2>
     <?php }?>
     </div>
 </body>
